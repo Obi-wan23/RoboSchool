@@ -1,0 +1,164 @@
+.big-container {
+	display: flex;
+	@media (max-width: 575px) {
+		position: relative;
+		display: block;
+		width: 320px;
+		margin: 0 auto;
+	}
+}
+.header {
+	background-color: $fontColor;
+	&__nav {
+		@media (max-width: 575px) {
+			&.active {
+				.header__list {
+					visibility:visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: 40px;
+		padding-top: 38px;
+		margin-right: 445px;
+			@media (max-width: 575px) {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+			visibility: hidden;
+			width: 320px;
+			height: 666px;
+			z-index: 3;
+			background-color: $fontColor;
+			flex-direction: column;
+			row-gap: 20px;
+			padding-left: 97px;
+			padding-top: 192px;
+			transition: all 0.3s ease-in;
+		}
+	}
+	&__name {
+		padding-top: 30px;
+		padding-left: 100px;
+		margin-right: 473px;
+		@media (max-width: 575px) {
+			padding-left: 10px;
+			padding-top: 15px;
+		}
+	}
+	&__link {
+		@include font($whiteColor, 20px, 400);
+			&:hover {
+				color: $redColor;
+		}
+		@media (max-width: 575px) {
+			font-size: 30px;
+			font-weight: 600;
+		}
+	}
+	&__phone {
+		padding-top: 30px;
+		@media (max-width: 575px) {
+			position: absolute;
+			top: 10px;
+			left: 212px;
+			padding-top: 0;
+		}
+	}
+}
+.logo__name {
+	text-transform: uppercase;
+	line-height: 160%;
+	@include font($whiteColor, 30px, bold);
+	@media (max-width: 575px) {
+		@include font($whiteColor, 18px, bold);
+		padding-top: 3px;
+	}
+}
+.phone {
+	&_icon {
+		@media (max-width: 575px) {
+			border: 1px solid rgba(255, 255, 255, 0.08);
+			mix-blend-mode: normal;
+			border-radius: 10px;
+			width: 44px;
+			height: 44px;
+			border-radius: 10px;
+			background-image: url(../img/Call.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+	&_icon-link {
+		@media (max-width: 575px) {
+			font-size: 2px !important;
+			display: block;
+			width: 44px;
+			height: 44px;
+			opacity: 0;
+		}
+	}
+	&__link {
+		@include font($whiteColor, 30px, 600);
+			&:hover {
+			color: $redColor;
+		}
+		@media (max-width: 575px) {
+			font-size: 16px;
+		}
+	}
+}
+.burger-btn {
+	@media (max-width: 575px) {
+		top: -120px;
+		left: 265px;
+		width: 44px;
+		height: 44px;
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		background-color: transparent;
+		position: relative;
+		z-index: 3;
+		&.active {
+			.burger-btn__span {
+				transition: all 0.3s ease-in;
+				&:nth-child(1) {
+					transform: rotate(45deg);
+					top: calc(50% - 1px);
+				}
+				&:nth-child(2) {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+	&__span {
+		@media (max-width: 575px) {
+			position: absolute;
+			background-color: white;
+			display: block;
+			height: 2px;
+			width: 26px;
+			left: 9px;
+			border-radius: 2px;
+			&:nth-child(1) {
+				top: 15px;
+			}
+			&:nth-child(2) {
+				top: 20px;
+			}
+			&:nth-child(3) {
+				top: 25px;
+				width: 13px;
+			}
+		}
+	}
+}
+

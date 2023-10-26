@@ -1,0 +1,8 @@
+@mixin font ($color, $fontSize, $fontW) {
+	color: $color;
+	font-size: $fontSize;
+	font-weight: $fontW;
+	font-family: 'Jost', sans-serif;
+	line-height: 160%;
+}
+

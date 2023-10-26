@@ -1,0 +1,617 @@
+.main-container {
+	position: relative;
+	background-color: $fontColor;
+	height: 1000px;
+	margin-bottom: 120px;
+	@media (max-width: 575px) {
+		height: 519px;
+		margin-bottom: 60px;
+	}
+}
+.container {
+	margin: 0 380px;
+	position: relative;
+	@media (max-width: 575px) {
+		width: 320px;
+		margin: 0 auto;
+	}
+	&_wide {
+		margin: 0 0 0 380px;
+		@media (max-width: 575px) {
+			margin: 0 auto;
+		}
+	}
+	&_narrow {
+		margin: 0 0 0 440px;
+		@media (max-width: 575px) {
+			margin: 0 auto;
+		}
+	}
+}
+.description {
+	&__text {
+		@include font($whiteColor, 70px, 600);
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		@media (max-width: 575px) {
+			@include font($whiteColor, 30px, 600);
+			padding-left: 50px;
+			margin-bottom: 10px;
+		}
+	}
+	&__span {
+		@include font($whiteColor, 20px, 400);
+		display: inline-block;
+		width: 478px;
+		margin-bottom: 50px;
+		@media (max-width: 575px) {
+			font-size: 16px;
+			width: 250px;
+			text-align: center;
+			padding-top: 2px;
+			margin-left: 34px;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: -180px;
+		left: 55px;
+		@media (max-width: 575px) {
+			width: 180px;
+			height: 320px;
+			top: -62px;
+			left: 19px;
+		}
+	}
+	&__eclipse {
+		position: absolute;
+		top: 179px;
+		left: 542px;
+		@media (max-width: 575px) {
+			top: 195px;
+			left: 24px;
+		}
+	}
+	&__btn {
+		@media (max-width: 575px) {
+			position: absolute;
+			z-index: 2;
+			left: 10px;
+			top: 420px;
+		}
+	}
+}
+.main__description {
+	padding-top: 265px;
+	@media (max-width: 575px) {
+		padding-top: 2px;
+	}
+	&__about {
+		display: inline-block;
+		padding-top: 120px;
+		@media (max-width: 575px) {
+			padding-top: 60px;
+			margin-left: 10px;
+			width: 300px;
+		}
+	&__teachers {
+		margin-bottom: 119px;
+		}
+	}
+}
+.main-btn {
+	display: block;
+	width: 260px;
+	height: 79px;
+	background: $redColor;
+	border-radius: 5px;
+	@include font($whiteColor, 18px, 400);
+	@media (max-width: 575px) {
+		font-size: 16px;
+		height: 60px;
+		width: 300px;
+	}
+}
+.eclipse {
+	width: 783px;
+	height: 783px;
+	border: 80px solid #FFFFFF;
+	border-radius: 500px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	@media (max-width: 575px) {
+		width: 273px;
+		height: 270px;
+		border: 27px solid #FFFFFF;
+	}
+}
+.about-container {
+	background-color: $whiteColor;
+	height: 614px;
+	@media (max-width: 575px) {
+		height: 905px;
+	}
+}
+.about {
+	&__text {
+		display: inline-block;
+		@include font($fontColor, 30px, 400);
+		width: 891px;
+		margin-bottom: 60px;
+		@media (max-width: 575px) {
+			font-size: 20px;
+			width: 300px;
+			margin-bottom: 35px;
+			padding-left: 10px;
+		}
+		&_bold {
+			@include font($fontColor, 30px, 600);
+			@media (max-width: 575px) {
+				font-size: 20px;
+			}
+		}
+	}
+	&__space {
+		display: none;
+		@media (max-width: 575px) {
+			display: initial;
+		}
+	}
+	&__list {
+		display: flex;
+		@media (max-width: 575px) {
+			flex-direction: column;
+			row-gap: 22px;
+		}
+	}
+	&__item {
+		margin-right: 40px;
+			&:nth-child(4) {
+			margin-right: 0px;
+		}
+		@media (max-width: 575px) {
+			text-align: center;
+			&:nth-child(4) {
+				margin-right: 40px;
+			}
+		}
+	}
+	&__number {
+		@include font($redColor, 70px, 600);
+		@media (max-width: 575px) {
+			font-size: 60px;
+			padding-left: 40px;
+		}
+	}
+	&__span {
+		@include font($fontColor, 18px, 400);
+		opacity: 0.7;
+		display: block;
+		width: 260px;
+		@media (max-width: 575px) {
+			font-size: 16px;
+			width: 270px;
+			padding-left: 50px;
+		}
+		&_long {
+			@media (max-width: 575px) {
+				padding-left: 25px;
+			}
+		}
+	}
+	&__br {
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+}
+// Предложения
+.features-container {
+	background-color: $bgAddColor;
+	height: 500px;
+	margin-bottom: 100px;
+	@media (max-width: 575px) {
+		height: 662px;
+		margin-bottom: 58px;
+	}
+}
+.features {
+	&__main-span {
+		@include font($fontColor, 50px, 600);
+		display: inline-block;
+		padding-top: 100px;
+		margin-bottom: 60px;
+		@media (max-width: 575px) {
+			text-align: center;
+			font-size: 30px;
+			padding-top: 38px;
+			margin-bottom: 42px;
+			line-height: normal;
+		}
+	}
+	&__list {
+		display: flex;
+		@media (max-width: 575px) {
+			flex-direction: column;
+			row-gap: 31px;
+		}
+	}
+	&__item {
+		position: relative;
+		margin-right: 40px;
+			&:nth-child(3) {
+			margin-right: 0px;
+		}
+		@media (max-width: 575px) {
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+	&__text {
+		@include font($fontColor, 24px, 600);
+		display: inline-block;
+		margin-bottom: 20px;
+		@media (max-width: 575px) {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+	}
+	&__span {
+		@include font($fontColor, 18px, 400);
+		opacity: 0.7;
+		display: block;
+		width: 360px;
+		@media (max-width: 575px) {
+			font-size: 16px;
+			width: 300px;
+			padding-left: 18px;
+			text-align: center;
+		}
+	}
+	&__icon {
+		position: absolute;
+		top: 0px;
+		left: 115px;
+		width: 24px;
+		height: 24px;
+		border-radius: 20px;
+		&:hover {
+			cursor: pointer;
+			.features__clue {
+				visibility: visible;
+			}
+		}
+		@media (max-width: 575px) {
+			left: 218px;
+		}
+	}
+	&__clue {
+		position: absolute;
+		width: 251px;
+		height: 56px;
+		border-radius: 5px;
+		background-color: $whiteColor;
+		box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
+		top: -65px;
+		left: 0px;
+		@include font($fontColor, 16px, 400);
+		padding: 15px 20px;
+		visibility: hidden;
+		transition: 0.1s;
+		@media (max-width: 575px) {
+			width: 224px;
+			height: 52px;
+			font-size: 14px;
+			top: -63px;
+			left: -170px;
+		}
+	}
+}
+// Учителя
+.teachers-container {
+	background-color: $whiteColor;
+	@media (max-width: 575px) {
+		height: 2185px;
+	}
+}
+.teachers {
+	position: relative;
+	width: 1560px;
+	height: 886px;
+	@media (max-width: 575px) {
+		width: 100%;
+		overflow: hidden;
+		height: 665px;
+	}
+	&__text {
+		@include font($fontColor, 50px, 600);
+		margin-bottom: 60px;
+		width: 685px;
+		@media (max-width: 575px) {
+			font-size: 30px;
+			width: 300px;
+			text-align: center;
+			padding-left: 20px;
+			line-height: normal;
+			margin-bottom: 40px;
+		}
+	}
+	&__link {
+		@include font($redColor, 18px, 400);
+		@media (max-width: 575px) {
+			font-size: 16px;
+		}
+		&:hover {
+			color: $fontColor;
+		}
+	}
+	&__img {
+		margin-bottom: 25px;
+		@media (max-width: 575px) {
+			width: 220px;
+			height: 306px;
+			border-radius: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&__list {
+		height: 655px;
+		@media (max-width: 575px) {
+			padding-left: 10px;
+		}
+	}
+	&__item {
+		height: 645px;
+	}
+	&__buttons {
+		position: absolute;
+		display: flex;
+		column-gap: 15px;
+		top: 852px;
+		left: 1065px;
+	}
+}
+.teacher-name {
+	@include font($fontColor, 24px, 600);
+	margin-bottom: 10px;
+	@media (max-width: 575px) {
+		font-size: 20px;
+	}
+	&_small {
+		font-size: 16px !important;
+		margin-bottom: 0;
+	}
+}
+.teacher-proff {
+	@include font($fontColor, 18px, 400);
+	opacity: 0.7;
+	margin-bottom: 20px;
+	@media (max-width: 575px) {
+		font-size: 14px;
+		width: 203px;
+		margin-bottom: 34px;
+		&_long {
+			margin-bottom: 10px;
+		}
+		&_small {
+			font-size: 12px !important
+		}
+	}
+}
+// Слайдер
+.slider-buttons__btn {
+	width: 33px;
+	height: 33px;
+	border-radius: 30px;
+	background: #230B34;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: $fontColor;
+	border-radius: 5px;
+	@media (max-width: 575px) {
+		top: 1px;
+		height: 3px;
+		border: 1px;
+		border-radius: 3px;
+	}
+}
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+	border-radius: 5px;
+	height: 5px;
+	width: 360px;
+	top: 865px;
+	@media (max-width: 575px) {
+		top: 600px;
+		left: 10px;
+		width: 300px;
+	}
+}
+// Предложения
+.offers {
+	&__text {
+		@include font($fontColor, 50px, 600);
+		margin-bottom: 80px;
+		@media (max-width: 575px) {
+			font-size: 30px;
+			line-height: normal;
+			text-align: center;
+			width: 260px;
+			padding-left: 55px;
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: 40px;
+		margin-bottom: 140px;
+		@media (max-width: 575px) {
+			flex-direction: column;
+			row-gap: 30px;
+		}
+	}
+	&__item {
+		@media(max-width: 575px) {
+			width: 300px;
+			padding-left: 10px;
+		}
+	}
+}
+.card {
+	border: 1px solid rgba(20, 16, 36, 0.2);
+	width: 360px;
+	height: 460px;
+	border-radius: 20px;
+	padding: 40px;
+	@media (max-width: 575px) {
+		width: 300px;
+		height: 394px;
+		padding: 38px 20px;
+	}
+	&__header {
+		@include font($fontColor, 30px, 600);
+		padding-left: 65px;
+		margin-bottom: 63px;
+		@media (max-width: 575px) {
+			margin-bottom: 41px;
+			padding-left: 55px;
+		}
+		&_right {
+			padding-left: 75px;
+			@media (max-width: 575px) {
+				padding-left: 66px;
+			}
+		}
+	}
+	&__price {
+		@include font($fontColor, 50px, 600);
+		padding-left:	30px;
+		margin-bottom: 20px;
+		@media (max-width: 575px) {
+			padding-left: 20px;
+		}
+	}
+	&__course {
+		@include font($fontColor, 18px, 400);
+		width: 250px;
+		text-align: center;
+		padding-left: 25px;
+		margin-bottom: 61px;
+		@media (max-width: 575px) {
+			margin-bottom: 34px;
+		}
+	}
+	&__course_wide {
+		margin-bottom: 31px;
+		@media (max-width: 575px) {
+			margin-bottom: 17px;
+		}
+	}
+	&:hover {
+		height: 500px;
+		transition: 0.5s ease-in;
+		background-color: $fontColor;
+		transform: translateY(-20px);
+		.card__header {
+			@include font($whiteColor, 30px, 600);
+		}
+		.card__price {
+			@include font($whiteColor, 50px, 600);
+		}
+		.card__course {
+			@include font($whiteColor, 18px, 400);
+			margin-bottom: 85px;
+		}
+		.card__course_wide {
+			margin-bottom: 50px;
+		}
+	}
+}
+.card-btn {
+	width: 280px;
+	height: 79px;
+	background: #D52027;
+	border-radius: 5px;
+	@include font($whiteColor, 18px, 400);
+	@media (max-width: 575px) {
+		width: 260px;
+		height: 60px;
+		font-size: 16px;
+	}
+	&_black {
+		background-color: $fontColor;
+		width: 500px;
+		height: 64px;
+		@media (max-width: 575px) {
+			width: 300px;
+			height: 60px;
+		}
+	}
+}
+// СпецПредложение
+.special-container {
+	background-color: $redColor;
+	height: 460px;
+	overflow: hidden;
+	@media (max-width: 575px) {
+		height: 536px;
+	}
+}
+.percents {
+	height: 120px;
+	display: flex;
+	@media (max-width: 575px) {
+		display: none;
+	}
+}
+.special {
+	display: flex;
+	column-gap: 125px;
+	@media (max-width: 575px) {
+		flex-direction: column;
+	}
+	&__text {
+		@include font($whiteColor, 36px, 600);
+		line-height: 130%;
+		padding-top: 106px;
+		margin-bottom: 20px;
+		@media (max-width: 575px) {
+			font-size: 30px;
+			line-height: normal;
+			padding-top: 39px;
+			text-align: center;
+			margin-bottom: 13px;
+		}
+	}
+	&__span {
+		@include font($whiteColor, 20px, 400);
+		line-height: 130%;
+		@media (max-width: 575px) {
+			font-size: 16px;
+			padding-left: 40px;
+			display: inline-block;
+			text-align: center;
+			width: 295px;
+		}
+	}
+	&__forms {
+		padding-top: 87px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		@media (max-width: 575px) {
+			padding-top: 47px;
+			padding-left: 10px;
+		}
+	}
+	&__input {
+		width: 500px;
+		height: 64px;
+		border-radius: 5px;
+		@media (max-width: 575px) {
+			width: 300px;
+			height: 60px;
+		}
+	}
+	&__input[placeholder] {
+		padding-left: 20px;
+		@include font($fontColor, 18px, 400);
+	}
+}
